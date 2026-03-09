@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://77vjqs2761d4"]
+
+[ext_resource type="Script" uid="uid://c1rvtla3tb1lo" path="res://scripts/MainMenu.cs" id="1_5d5v2"]
+[ext_resource type="Texture2D" uid="uid://1m24oi5uwauy" path="res://empty classroom with sunlight shining through window 3d.png" id="2_v0qjw"]
+[ext_resource type="Texture2D" uid="uid://c13qax1p4ctlv" path="res://pink w pattern.png" id="3_7260r"]
+[ext_resource type="Texture2D" uid="uid://bju5873dl58ol" path="res://mockofun-text-editor.png" id="4_l3124"]
+[ext_resource type="Texture2D" uid="uid://bml5jwnt33dlc" path="res://characters/Elsa.png" id="5_ecnfn"]
+[ext_resource type="Texture2D" uid="uid://dhwxcaioij1mv" path="res://characters/Lucy.png" id="6_kiw3d"]
+[ext_resource type="Texture2D" uid="uid://cf0tgmyma7k60" path="res://characters/Mia.png" id="7_8wqjl"]
+[ext_resource type="Texture2D" uid="uid://dwc7xxwq3b4kn" path="res://characters/Sussie.png" id="8_73mli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnfjo"]
+bg_color = Color(0.7176471, 0.39607844, 0.47843137, 0.7490196)
+
+[node name="MainMenu" type="Node2D" unique_id=682702761]
+script = ExtResource("1_5d5v2")
+
+[node name="Play Button" type="Button" parent="." unique_id=1438793392]
+z_index = 2
+offset_left = 40.0
+offset_top = 199.0
+offset_right = 165.0
+offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dnfjo")
+text = "PLAY"
+
+[node name="Extras Button" type="Button" parent="." unique_id=23149279]
+z_index = 2
+offset_left = 40.0
+offset_top = 230.0
+offset_right = 165.0
+offset_bottom = 255.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dnfjo")
+text = "EXTRAS"
+
+[node name="Settings Button" type="Button" parent="." unique_id=990672535]
+z_index = 2
+offset_left = 40.0
+offset_top = 261.0
+offset_right = 165.0
+offset_bottom = 286.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dnfjo")
+text = "SETTINGS"
+
+[node name="Exit Button" type="Button" parent="." unique_id=1100229248]
+z_index = 2
+offset_left = 40.0
+offset_top = 292.0
+offset_right = 165.0
+offset_bottom = 317.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_dnfjo")
+text = "EXIT"
+
+[node name="EmptyClassroomWithSunlightShiningThroughWindow3d" type="Sprite2D" parent="." unique_id=2084252039]
+position = Vector2(341.00003, 195.375)
+scale = Vector2(1.3284984, 1.3284982)
+texture = ExtResource("2_v0qjw")
+metadata/_edit_lock_ = true
+
+[node name="PinkWPattern" type="Sprite2D" parent="." unique_id=975071450]
+z_index = 1
+position = Vector2(100.49999, 180.99998)
+scale = Vector2(0.18796296, 0.18796295)
+texture = ExtResource("3_7260r")
+metadata/_edit_lock_ = true
+
+[node name="MockofunTextEditor" type="Sprite2D" parent="." unique_id=1885482951]
+z_index = 1
+position = Vector2(101.00001, 86.00001)
+scale = Vector2(0.34166667, 0.38833335)
+texture = ExtResource("4_l3124")
+
+[node name="Elsa" type="Sprite2D" parent="." unique_id=1461974870]
+position = Vector2(551, 263)
+scale = Vector2(0.20039296, 0.20039296)
+texture = ExtResource("5_ecnfn")
+
+[node name="Lucy" type="Sprite2D" parent="." unique_id=1528349271]
+position = Vector2(272, 263)
+scale = Vector2(0.20039296, 0.20039296)
+texture = ExtResource("6_kiw3d")
+
+[node name="Mia" type="Sprite2D" parent="." unique_id=1890825464]
+position = Vector2(467, 263)
+scale = Vector2(0.20039296, 0.20039296)
+texture = ExtResource("7_8wqjl")
+
+[node name="Sussie" type="Sprite2D" parent="." unique_id=456422197]
+position = Vector2(373, 263)
+scale = Vector2(0.20039296, 0.20039296)
+texture = ExtResource("8_73mli")
+
+[connection signal="pressed" from="Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]

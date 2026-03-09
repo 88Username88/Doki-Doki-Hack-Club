@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d3sl8cl3bxhes"]
+
+[ext_resource type="Script" uid="uid://bkj3vcpnktl7e" path="res://scripts/DialogueManager.cs" id="1_0qyo7"]
+
+[node name="DialogueUi" type="Node2D" unique_id=821963440]
+script = ExtResource("1_0qyo7")
+
+[node name="Speech" type="Label" parent="." unique_id=389321421]
+offset_left = 69.0
+offset_top = 301.0
+offset_right = 575.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="." unique_id=1976483570]
+offset_left = 69.0
+offset_top = 278.0
+offset_right = 221.0
+offset_bottom = 301.0
+theme_override_font_sizes/font_size = 15
+
+[node name="Skip Speech" type="Button" parent="." unique_id=662692984]
+offset_left = 596.0
+offset_top = 338.0
+offset_right = 649.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 10
+text = "next"
+flat = true
+
+[connection signal="pressed" from="Skip Speech" to="." method="DisplayNextMessage"]
