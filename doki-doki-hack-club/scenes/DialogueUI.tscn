@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://d3sl8cl3bxhes"]
 
 [ext_resource type="Script" uid="uid://bkj3vcpnktl7e" path="res://scripts/DialogueManager.cs" id="1_0qyo7"]
+[ext_resource type="Texture2D" uid="uid://ik3hu6ojk4qh" path="res://characters/download (1).png" id="2_nmtye"]
+[ext_resource type="Texture2D" uid="uid://dpd4c4x3rcwf3" path="res://characters/download (2).png" id="3_xkfy2"]
+[ext_resource type="Texture2D" uid="uid://tj1wwips4fd3" path="res://characters/download (3).png" id="4_5vj1d"]
+[ext_resource type="Texture2D" uid="uid://ckurlxgbauhwa" path="res://characters/download.png" id="5_dmhj1"]
 
 [node name="DialogueUi" type="Node2D" unique_id=821963440]
 script = ExtResource("1_0qyo7")
 
 [node name="Speech" type="Label" parent="." unique_id=389321421]
+z_index = 3
 offset_left = 69.0
 offset_top = 301.0
 offset_right = 575.0
@@ -14,6 +19,7 @@ theme_override_font_sizes/font_size = 13
 autowrap_mode = 3
 
 [node name="Name" type="Label" parent="." unique_id=1976483570]
+z_index = 3
 offset_left = 69.0
 offset_top = 278.0
 offset_right = 221.0
@@ -21,6 +27,7 @@ offset_bottom = 301.0
 theme_override_font_sizes/font_size = 15
 
 [node name="Skip Speech" type="Button" parent="." unique_id=662692984]
+z_index = 3
 offset_left = 596.0
 offset_top = 338.0
 offset_right = 649.0
@@ -28,5 +35,29 @@ offset_bottom = 360.0
 theme_override_font_sizes/font_size = 10
 text = "next"
 flat = true
+
+[node name="Elsa" type="Sprite2D" parent="." unique_id=965077430]
+visible = false
+position = Vector2(499.13248, 245.2318)
+scale = Vector2(0.3334548, 0.3334548)
+texture = ExtResource("2_nmtye")
+
+[node name="Sussie" type="Sprite2D" parent="." unique_id=510065303]
+visible = false
+position = Vector2(251, 245)
+scale = Vector2(0.30119863, 0.30119863)
+texture = ExtResource("3_xkfy2")
+
+[node name="Mia" type="Sprite2D" parent="." unique_id=805292545]
+visible = false
+position = Vector2(383, 227.99998)
+scale = Vector2(0.32755798, 0.32755798)
+texture = ExtResource("4_5vj1d")
+
+[node name="Lucy" type="Sprite2D" parent="." unique_id=41837167]
+visible = false
+position = Vector2(121.00001, 232.00002)
+scale = Vector2(0.3102898, 0.3277631)
+texture = ExtResource("5_dmhj1")
 
 [connection signal="pressed" from="Skip Speech" to="." method="DisplayNextMessage"]

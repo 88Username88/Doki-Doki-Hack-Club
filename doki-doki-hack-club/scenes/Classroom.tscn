@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1m24oi5uwauy" path="res://empty classroom with sunlight shining through window 3d.png" id="1_qq0yr"]
 [ext_resource type="Texture2D" uid="uid://c13qax1p4ctlv" path="res://pink w pattern.png" id="3_1tyx7"]
 [ext_resource type="PackedScene" uid="uid://d3sl8cl3bxhes" path="res://scenes/DialogueUI.tscn" id="4_xii5s"]
+[ext_resource type="Texture2D" uid="uid://g765rsjdetfm" path="res://hdcr.png" id="5_rmcuf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6h312"]
 bg_color = Color(0.7176471, 0.39607844, 0.47843137, 0.7490196)
@@ -12,6 +13,8 @@ bg_color = Color(0.7176471, 0.39607844, 0.47843137, 0.7490196)
 script = ExtResource("1_6h312")
 
 [node name="EmptyClassroomWithSunlightShiningThroughWindow3d" type="Sprite2D" parent="." unique_id=899817177]
+visible = false
+z_index = -1
 position = Vector2(340, 197)
 scale = Vector2(1.3430035, 1.3430034)
 texture = ExtResource("1_qq0yr")
@@ -40,6 +43,7 @@ offset_bottom = 301.0
 
 [node name="PinkWPattern" type="Sprite2D" parent="." unique_id=352187909]
 self_modulate = Color(1, 1, 1, 0.8392157)
+z_index = 1
 position = Vector2(320.12576, 455.82077)
 rotation = 1.5707964
 scale = Vector2(0.33485323, 0.33485323)
@@ -47,5 +51,11 @@ texture = ExtResource("3_1tyx7")
 metadata/_edit_lock_ = true
 
 [node name="DialogueUi" parent="." unique_id=821963440 instance=ExtResource("4_xii5s")]
+
+[node name="Hdcr" type="Sprite2D" parent="." unique_id=750014304]
+z_index = -1
+position = Vector2(320.00003, 181)
+scale = Vector2(0.25069448, 0.25069454)
+texture = ExtResource("5_rmcuf")
 
 [connection signal="pressed" from="MainMenu Button" to="." method="_on_main_menu_button_pressed"]

@@ -25,6 +25,7 @@ offset_bottom = 301.0
 
 [node name="PinkWPattern" type="Sprite2D" parent="." unique_id=744289581]
 self_modulate = Color(1, 1, 1, 0.8392157)
+z_index = 1
 position = Vector2(320.12576, 455.82077)
 rotation = 1.5707964
 scale = Vector2(0.33485323, 0.33485323)

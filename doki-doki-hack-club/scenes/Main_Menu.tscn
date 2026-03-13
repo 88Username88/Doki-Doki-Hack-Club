@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://1m24oi5uwauy" path="res://empty classroom with sunlight shining through window 3d.png" id="2_v0qjw"]
 [ext_resource type="Texture2D" uid="uid://c13qax1p4ctlv" path="res://pink w pattern.png" id="3_7260r"]
 [ext_resource type="Texture2D" uid="uid://bju5873dl58ol" path="res://mockofun-text-editor.png" id="4_l3124"]
-[ext_resource type="Texture2D" uid="uid://bml5jwnt33dlc" path="res://characters/Elsa.png" id="5_ecnfn"]
-[ext_resource type="Texture2D" uid="uid://dhwxcaioij1mv" path="res://characters/Lucy.png" id="6_kiw3d"]
-[ext_resource type="Texture2D" uid="uid://cf0tgmyma7k60" path="res://characters/Mia.png" id="7_8wqjl"]
-[ext_resource type="Texture2D" uid="uid://dwc7xxwq3b4kn" path="res://characters/Sussie.png" id="8_73mli"]
+[ext_resource type="Texture2D" uid="uid://ik3hu6ojk4qh" path="res://characters/download (1).png" id="5_5d5v2"]
+[ext_resource type="Texture2D" uid="uid://dpd4c4x3rcwf3" path="res://characters/download (2).png" id="6_v0qjw"]
+[ext_resource type="Texture2D" uid="uid://tj1wwips4fd3" path="res://characters/download (3).png" id="7_7260r"]
+[ext_resource type="Texture2D" uid="uid://ckurlxgbauhwa" path="res://characters/download.png" id="8_l3124"]
+[ext_resource type="Texture2D" uid="uid://g765rsjdetfm" path="res://hdcr.png" id="9_v0qjw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnfjo"]
 bg_color = Color(0.7176471, 0.39607844, 0.47843137, 0.7490196)
@@ -70,25 +71,34 @@ position = Vector2(101.00001, 86.00001)
 scale = Vector2(0.34166667, 0.38833335)
 texture = ExtResource("4_l3124")
 
-[node name="Elsa" type="Sprite2D" parent="." unique_id=1461974870]
-position = Vector2(551, 263)
-scale = Vector2(0.20039296, 0.20039296)
-texture = ExtResource("5_ecnfn")
+[node name="Elsac" type="Sprite2D" parent="." unique_id=527159906]
+z_index = 1
+position = Vector2(552.52765, 263.6734)
+scale = Vector2(0.28503725, 0.28503725)
+texture = ExtResource("5_5d5v2")
 
-[node name="Lucy" type="Sprite2D" parent="." unique_id=1528349271]
-position = Vector2(272, 263)
-scale = Vector2(0.20039296, 0.20039296)
-texture = ExtResource("6_kiw3d")
+[node name="Sussiec" type="Sprite2D" parent="." unique_id=1409259563]
+z_index = 1
+position = Vector2(374.00003, 265)
+scale = Vector2(0.26565436, 0.26565436)
+texture = ExtResource("6_v0qjw")
 
-[node name="Mia" type="Sprite2D" parent="." unique_id=1890825464]
-position = Vector2(467, 263)
-scale = Vector2(0.20039296, 0.20039296)
-texture = ExtResource("7_8wqjl")
+[node name="Miac" type="Sprite2D" parent="." unique_id=939992010]
+z_index = 1
+position = Vector2(467.99997, 254)
+scale = Vector2(0.29098114, 0.29098114)
+texture = ExtResource("7_7260r")
 
-[node name="Sussie" type="Sprite2D" parent="." unique_id=456422197]
-position = Vector2(373, 263)
-scale = Vector2(0.20039296, 0.20039296)
-texture = ExtResource("8_73mli")
+[node name="Lucyc" type="Sprite2D" parent="." unique_id=2092321250]
+z_index = 1
+position = Vector2(272, 264)
+scale = Vector2(0.28522828, 0.28522828)
+texture = ExtResource("8_l3124")
+
+[node name="Hdcr" type="Sprite2D" parent="." unique_id=567436394]
+position = Vector2(390, 180.99998)
+scale = Vector2(0.25034723, 0.25034723)
+texture = ExtResource("9_v0qjw")
 
 [connection signal="pressed" from="Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]

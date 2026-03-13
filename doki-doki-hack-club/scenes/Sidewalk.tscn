@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://g8cgywuavfuv" path="res://Sidewalk along a road.png" id="2_itnfc"]
 [ext_resource type="Texture2D" uid="uid://c13qax1p4ctlv" path="res://pink w pattern.png" id="3_itnfc"]
 [ext_resource type="PackedScene" uid="uid://d3sl8cl3bxhes" path="res://scenes/DialogueUI.tscn" id="4_ht6us"]
+[ext_resource type="Texture2D" uid="uid://bqvaw1l4qo4y7" path="res://hdsw.png" id="5_406bn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ht6us"]
 bg_color = Color(0.7176471, 0.39607844, 0.47843137, 0.7490196)
@@ -39,6 +40,7 @@ offset_bottom = 301.0
 
 [node name="PinkWPattern" type="Sprite2D" parent="." unique_id=1588715746]
 self_modulate = Color(1, 1, 1, 0.8392157)
+z_index = 1
 position = Vector2(320.12576, 455.82077)
 rotation = 1.5707964
 scale = Vector2(0.33485323, 0.33485323)
@@ -46,5 +48,10 @@ texture = ExtResource("3_itnfc")
 metadata/_edit_lock_ = true
 
 [node name="DialogueUi" parent="." unique_id=821963440 instance=ExtResource("4_ht6us")]
+
+[node name="Hdsw" type="Sprite2D" parent="." unique_id=686342741]
+position = Vector2(320, 178.25)
+scale = Vector2(0.2517361, 0.2517361)
+texture = ExtResource("5_406bn")
 
 [connection signal="pressed" from="MainMenu Button" to="." method="_on_main_menu_button_pressed"]

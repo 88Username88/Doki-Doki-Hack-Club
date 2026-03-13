@@ -4,9 +4,6 @@ using System.Collections.Generic;
 
 public partial class Global : Node
 {
-	   // --- Dialogue Management ---
-
-    // Custom class to hold a single dialogue entry
     public class DialogueEntry
     {
         public string SpeakerName { get; set; }
@@ -18,21 +15,16 @@ public partial class Global : Node
             MessageText = message;
         }
     }
-
-    // A list to store all your dialogue sequences
     private List<DialogueEntry> _dialogueList = new List<DialogueEntry>();
-
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 
 		GD.Print("Global Autoload is active!");
-		InitializeDialogue(); // Call this to populate your dialogue list
+		InitializeDialogue();
 	}
 	
 	 private void InitializeDialogue()
     {
-        // Add your dialogue messages here in the desired order
         _dialogueList.Add(new DialogueEntry("Y/N", "Another morning as a highschool student. Waiting for my childhood friend before walking to school.")); // Index 0
         _dialogueList.Add(new DialogueEntry("Y/N", "I've only got 3 more days to pick a club, maybe i'll check out Elsa's club since she keeps mentioning it.")); // Index 1
         _dialogueList.Add(new DialogueEntry("Elsa", "Hey! Y/N, there you are! I though you left without me for a minute")); // Index 2
@@ -125,7 +117,7 @@ public partial class Global : Node
 		_dialogueList.Add(new DialogueEntry("Lucy", "Wow, nice considering you said you weren't a good coder"));
 		_dialogueList.Add(new DialogueEntry("Elsa", "Yeah! now my turn"));
 		_dialogueList.Add(new DialogueEntry(" ", "Elsa's project is a little 2D platformer"));
-		_dialogueList.Add(new DialogueEntry("Elsa", "You said you liked games yesterday so I make this for you Y/N"));
+		_dialogueList.Add(new DialogueEntry("Elsa", "You said you liked games yesterday so I made this for you Y/N"));
 		_dialogueList.Add(new DialogueEntry("Y/N", "Thanks, I like it"));
 		_dialogueList.Add(new DialogueEntry("Lucy", "Mia, and your project?"));
 		_dialogueList.Add(new DialogueEntry("Mia", "I dont really want to show it anymore"));
@@ -139,8 +131,6 @@ public partial class Global : Node
 		_dialogueList.Add(new DialogueEntry(" ", "..."));
 
     }
-
-    // Method to get a dialogue entry by its index
     public DialogueEntry GetDialogueEntry(int index)
     {
         if (index >= 0 && index < _dialogueList.Count)
@@ -148,18 +138,9 @@ public partial class Global : Node
             return _dialogueList[index];
         }
         GD.PrintErr($"Dialogue entry at index {index} does not exist!");
-        return null; // Or throw an exception
+        return null;
     }
-
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-
-	// Set your default starting scene here
+	public override void _Process(double delta) {}
 	public string LastScenePath = "res://scenes/Sidewalk.tscn"; 
-
-	public int CurrentDialogueIndex = 0; // Add this to track progress globally
-	
+	public int CurrentDialogueIndex = 0;
 }
